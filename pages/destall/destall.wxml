@@ -1,0 +1,22 @@
+<!-- 引入过滤 -->
+<wxs src="../../utils/com.wxs" module="tools" />
+<scroll-view scroll-y class="desstall" bindscrolltolower="scroll" scroll-left="false" enable-back-to-top>
+  <scroll-view scroll-x class="desat" style="width: 100%;">
+    <view class="nav-de" wx:for="{{navtab}}" id="{{index}}" bindtap="qie" wx:key="{{index}}">{{item}}</view>
+    <text class="zhutia" style="left:{{index*136}}rpx"></text>
+  </scroll-view>
+  <swiper class="top" style="height: {{height}};" bindchange="chang" current="{{index}}" duration="300">
+    <swiper-item wx:for="{{navtab}}" wx:key="{{item}}">
+      <view class="item1 {{'emif'+index}}">
+        <view class="item" wx:for="{{songs[item].data}}" wx:for-item="musicitem" wx:key="{{musicitem.id}}"  bindtap="skp" id='{{musicitem.id}}'>
+          <image src="{{musicitem.coverImgUrl}}"></image>
+          <text class="itemli"><text class="iconfont icon-bofang"></text> <text style="vertical-align: top;">{{tools.renshu(musicitem.playCount)}}</text></text>
+          <view class="itemtext">
+            {{musicitem.name}}
+          </view>
+        </view>
+      </view>
+    </swiper-item>
+  </swiper>
+
+</scroll-view>

@@ -1,0 +1,11 @@
+@import '/static/iconfont/iconfont.wxss';
+
+
+.gedanh{
+  line-height: 50rpx;
+  margin: 0 0 10rpx 0;
+  display: flex;
+  justify-content: space-between;
+  font-size: 28rpx;
+  color: #909090;
+}

@@ -1,0 +1,96 @@
+<view class="sear">
+  <!-- 头部搜索区域 -->
+  <view class="header">
+    <view class="searchinput">
+      <text class="iconfont icon-sousuo seariconfont"></text>
+      <input type="text" value="{{searchConent}}" placeholder="{{placheolderContent}}" bindinput="handInput" />
+      <text class="clear" bindtap="clearhis" hidden="{{!searchConent}}">X</text>
+    </view>
+    <!-- <text class="cancel">取消</text> -->
+  </view>
+  <block wx:if="{{kaihgu}}">
+    <!-- 搜索内容 -->
+    <view class="showSearchContent" wx:if="{{searchList.length>0}}">
+      <view class="searchContent">搜索内容：{{searchConent}}</view>
+      <view class="searchList">
+        <view class="searchItem" wx:for="{{searchList}}" wx:key="{{id}}" bindtap="sou" data-value="{{item.name}}">
+          <text class="iconfont icon-sousuo "></text>
+          <txet>{{item.name}}</txet>
+        </view>
+      </view>
+    </view>
+    <!-- 历史搜索 -->
+    <view class="history" wx:if="{{historyList.length>0}}">
+      <view class="title">历史</view>
+      <view class="historyItem" wx:for="{{historyList}}" wx:key="{{index}}" bindtap="sou" data-value="{{item}}">
+        {{item}}</view>
+      <text class="iconfont icon-shanchu delect" bindtap="clearstory"></text>
+    </view>
+    <!-- 热搜榜 -->
+    <view class="hotContainer" wx:if="{{searchList.length<=0}}">
+      <view class="title">热搜榜</view>
+      <!-- 热搜列表 -->
+      <view class="hotList">
+        <view class="hotItem" wx:for="{{hotList}}" wx:key="searchWord" bindtap="sou" data-value="{{item.searchWord}}">
+          <text class="order">{{index+1}}</text>
+          <text>{{item.searchWord}}</text>
+          <image src="{{item.iconUrl}}" wx:if="{{item.iconUrl}}" class="iconUel"></image>
+        </view>
+      </view>
+    </view>
+  </block>
+
+  <view class="result" wx:if="{{!kaihgu}}">
+    <view class="scrollnav">
+      <view class="navitem" id="0" bindtap="tigg" data-type="1">歌曲</view>
+      <view class="navitem" id="1" bindtap="tigg" data-type="1000">歌单</view>
+      <view class="navitem" id="2" bindtap="tigg" data-type="1014">视频</view>
+      <text class="navText" style="left:{{itden*214+110}}rpx"></text>
+    </view>
+    <swiper class="her" current="{{itden}}" style="height: {{heigth}};" bindanimationfinish="finsh">
+      <swiper-item>
+        <view class="body0">
+          <view class="bodyit" wx:if="{{dats[itden]}}">
+            <view class="boitem" wx:for="{{dats[itden]}}" wx:key="{{id}}" bindtap="skip" id="{{item.id}}" data-type="1" data-dt="{{item.duration}}">
+              <view class="bohead">{{item.name}}</view>
+              <view class="bouser">{{item.artists[0].name}} - {{item.album.artist.name}}</view>
+            </view>
+          </view>
+          <view class="xiao" wx:if="{{!dats[itden]}}">
+            <Music></Music>
+          </view>
+        </view>
+      </swiper-item>
+      <swiper-item>
+        <view class="body1">
+          <view class="firItem" wx:if="{{dats[itden]}}" wx:for="{{dats[itden]}}" id="{{item.id}}" data-type="1000" bindtap="skip">
+            <image src="{{item.coverImgUrl}}"></image>
+            <view class="firbody">
+              <view class="firhe over">{{item.name}}</view>
+              <view class="firbo over">{{item.trackCount}}首 by {{item.creator.nickname}} 播放{{item.playCount}}次</view>
+            </view>
+          </view>
+          <view class="xiao" wx:if="{{!dats[itden]}}">
+            <Music></Music>
+          </view>
+        </view>
+      </swiper-item>
+      <swiper-item>
+        <view class="body2">
+          <view class="shipi" wx:if="{{dats[itden]}}">
+            <view class="bodsitem" wx:for="{{dats[itden]}}" id="{{item.vid}}" data-urlt="{{item.type}}" data-type="1014" bindtap="skip">
+              <view class="shhe">
+                {{item.title}}
+              </view>
+              <image src="{{item.coverUrl}}" class="pishmg"></image>
+            </view>
+          </view>
+          <view class="xiao" wx:if="{{!dats[itden]}}">
+            <Music></Music>
+          </view>
+        </view>
+      </swiper-item>
+    </swiper>
+
+  </view>
+</view>

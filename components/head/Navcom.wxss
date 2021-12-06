@@ -1,0 +1,21 @@
+.com-ti{
+  display: flex;
+  justify-content: space-between;
+}
+.com-h{
+  padding: 20rpx;
+}
+.com-h-t{
+  color: #666;
+  font-size: 32rpx;
+  line-height:80rpx ;
+}
+.com-h-n{
+   font-size: 32rpx;
+}
+.com-h-c{
+  border: 1rpx solid #333;
+  border-radius:30rpx;
+  padding: 10rpx 20rpx;
+  font-size: 24rpx;
+}

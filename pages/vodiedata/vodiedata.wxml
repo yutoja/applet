@@ -1,0 +1,98 @@
+<!-- 引入过滤 -->
+<wxs src="../../utils/com.wxs" module="tools" />
+
+<swiper	vertical class="vedio" bindanimationfinish="change" bindchange="eghage" bindtouchend="chend" bindtouchmove="move">
+  <swiper-item class="vedItem" wx:for="{{vediodata}}" wx:key="{{id}}">
+    <video class="item"  
+    loop
+    id="vedo{{index}}"	
+    controls="{{false}}" 
+    show-fullscreen-btn="{{false}}" 	
+    show-play-btn="{{false}}" 	
+    show-center-play-btn="{{false}}" 	
+    enable-progress-gesture="{{false}}" 	
+    object-fit="{{fill}}" 
+    bindtimeupdate="update" 
+    src="{{vedioUrl[index].url}}" 	
+    bindplay="play" 
+    bindpause="pause" 
+    bindtap="zhant"></video>
+    <view class="xinxi">
+      <view class="user" bindtap="skp" id="{{item.creator?item.creator.userId:item.artistId}}">
+        <image src="{{item.creator?item.creator.avatarUrl:item.cover}}"></image>
+        <text class="username">{{item.creator?item.creator.nickname:item.artistName}}</text>
+      </view>
+      <view class="videona over" style="width: 500rpx;">{{item.title}}</view>
+    </view>
+    <view class="ravedio" bindtap="seek" bindtouchstart="start">
+    <view class="xian"></view>
+    <view class="raxian " style="width: {{vediobi+'%'}};"></view>
+      <view class="radio {{!veji?'da':''}}" style="left: {{vediobi+'%'}};"></view>
+      </view>
+      <view class="vedioti"><text class="iconfont icon-yinle1"></text> 暂无音乐</view>
+   <view class="asdie">
+   <view class="asdieItem">
+   <text class="iconfont icon-icon"></text>
+   <view >{{tools.renshu(item.pp.likedCount)}}</view>
+   </view>
+   <view class="asdieItem" bindtap="puxi">
+   <text class="iconfont icon-pinglun1"></text>
+   <view >{{tools.renshu(item.pp.commentCount)}}</view>
+   </view>
+   <view class="asdieItem">
+   <text class="iconfont icon-zhuanfa"></text>
+   <view >{{tools.renshu(item.pp.shareCount)}}</view>
+   </view>
+   <view class="asdieItem">
+   <text class="iconfont icon-star2"></text>
+   <view >收藏</view>
+   </view>
+   </view>
+   <view
+    class="zhan" 
+    bindtap="vedioname" 
+    hidden="{{show}}" ><text class="iconfont icon-sanjiaoxing1 zhonxi"></text>
+   </view>
+  </swiper-item>
+</swiper>
+<view class="pilu {{puix?'pu':''}}">
+<view class="nav ">
+<text class="iconfont icon-weibiaoti- xiaol" bindtap="xiqu"></text>
+</view>
+  <view wx:if="{{deail[vedioId].xin.length>0}}">
+    <view class="commentheade">
+      <text class="headeleft">评论区</text>
+      <view class="headeright">
+        <!-- <text class="{{gee=='tui'?'select':''}}"  id='tui' bindtap="girr">推荐</text> -->
+        <text class="{{gee=='hot'?'select':''}}" id='hot' bindtap="girr">最热</text>
+        <text class="{{gee=='xin'?'select':''}}" id='xin' bindtap="girr">最新</text>
+      </view>
+    </view>
+    <scroll-view scroll-y class="commentscroll" bindscrolltolower="lower"  wx:if="{{deail[vedioId][gee].length>1}}">
+      <view class="commentitem" wx:for="{{deail[vedioId][gee]}}" wx:key="{{item.id}}" >
+        <view class="comitemhe">
+          <image src="{{item.user.avatarUrl}}" class="comimg"></image>
+          <view class="comjian">
+            <view class="comname" id="{{item.user.userId}}"  bindtap="skp">{{item.user.nickname}}</view>
+            <text>{{item.timeStr}}</text>
+          </view>
+          <view class="comdian">
+            {{item.likedCount}}
+            <text class="iconfont icon-31dianzan {{item.liked?'red':''}}"></text>
+          </view>
+        </view>
+        <view class="commentbody">
+          <view class="commentpin">{{item.content}}</view>
+          <!-- <view class="commenthui">7条回复 <text class="iconfont icon-jiantou"></text> </view> -->
+        </view>
+      </view>
+    </scroll-view><view class="wu" wx:else>暂无评论,欢迎抢沙发</view>
+  </view>
+  <view class="wuu" wx:else>
+  <List></List>
+  </view>
+  <view class="comfooter">
+    <input type="text" placeholder="想要疯狂色彩，何不任性呐喊" />
+    <text>发送</text>
+  </view>
+</view>

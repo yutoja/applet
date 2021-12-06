@@ -1,0 +1,82 @@
+.vedio{
+  height: 100vh;
+}
+.desat{
+  white-space: nowrap;
+  position: fixed;
+  top: 0;
+  background-color: white;
+  color: black;
+  z-index: 999;
+  height: 68rpx;
+}
+.nav-de{
+  display: inline-block;
+  padding:15rpx 40rpx;
+  box-sizing: border-box;
+}
+.borde{
+  background-color: #ccc;
+  color: white;
+  border-radius: 12rpx;
+}
+/* .nav-de:nth-child(1){
+  padding-left:10rpx;
+} */
+.xiaox{
+  margin-left: 50%;
+  margin-top: 200rpx;
+}
+.zhutia{
+  height: 10rpx;
+  width: 70rpx;
+  border-radius: 10rpx;
+  background-color: red;
+  display: inline-block;
+  position: absolute;
+  bottom: 55rpx;
+  z-index: -1;
+  transition: all 0.3s;
+}
+.sou{
+  margin:0 25rpx;
+  margin-top:78rpx ;
+  color: #939594;
+  background-color: #edefee;
+  text-align: center;
+  padding:15rpx 0;
+  border-radius: 100rpx;
+}
+.vediobody{
+  margin-top: 80rpx;
+  display: flex;
+  padding:0 20rpx;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+}
+.vedioItem{
+  border: 1rpx solid #eee;
+  border-radius:15rpx ;
+  width: 344rpx;
+  padding-bottom: 20rpx;
+  background-color: white;
+  margin-bottom: 20rpx;
+}
+.vedioItem image{
+  width: 345rpx;
+  height: 210rpx;
+  border-radius:15rpx ;
+}
+.vediotext{
+  font-size: 28rpx;
+  overflow: hidden;
+   display: -webkit-box;
+  text-overflow: ellipsis;
+  -webkit-line-clamp:2 ;
+  -webkit-box-orient:vertical ;
+  word-break: break-all;
+   width: 350rpx;
+   padding:0 10rpx;
+  box-sizing: border-box;
+}

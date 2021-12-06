@@ -1,0 +1,93 @@
+.list{
+  background-color: #f5f5f5;
+  padding: 0 34rpx;
+}
+.navsocrll{
+  padding: 5rpx;
+  display: flex;
+  white-space: nowrap;
+  position: relative;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  background-color: #f5f5f5;
+}
+.navsocrll .navitem{
+  display: inline-block;
+  padding: 0 30rpx;
+  line-height: 60rpx;
+}
+.maxha{
+  height: 100vh;
+}
+.scrollt{
+  position: absolute;
+  width: 70rpx;
+  left: 29rpx;
+  top:34rpx;
+  border-radius:25% ;
+  height: 10rpx;
+  z-index: -1;
+  background-color:red ;
+  transition: all 0.2s;
+}
+.guanli{
+   display: flex;
+   align-items: center;
+   padding: 25rpx 0;
+}
+.firs1{
+  height: 40rpx;
+  width: 40rpx;
+  border-radius: 50%;
+  margin-right: 25rpx;
+}
+.guanlis{
+  padding: 25rpx;
+  background-color: #f4e1e7;
+  border-radius: 25rpx;
+  height: 255rpx;
+  margin-bottom: 37rpx;
+}
+.guleft{
+  margin-left: 35rpx;
+}
+.guanxi{
+   font-size: 24rpx;
+   color: rgba(0, 0, 0, 0.5);
+   text-align: right;
+}
+.guanbo{
+  display: flex;
+}
+.gulef2{
+  margin-bottom: 25rpx;
+  font-size: 38rpx;
+  width: 120rpx;
+  text-align: center;
+}
+.lefter{
+  height: 120rpx;
+  width: 120rpx;
+  border-radius: 15rpx;
+}
+.guright{
+  font-size: 30rpx;
+  margin-left: 90rpx;
+  width: 330rpx;
+
+  padding-top: 26rpx;
+}
+.gulie{
+  margin-bottom: 28rpx;
+  font-size: 27rpx;
+  font-weight: 500;
+}
+.blba{
+  color: rgba(0, 0, 0, 0.2);
+}
+.over{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

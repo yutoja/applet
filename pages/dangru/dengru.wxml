@@ -1,0 +1,13 @@
+<view class="dengru">
+  <view class="bode" >
+<view class="ph">账户：<input type="text" placeholder="请输入手机号" id='phone' maxlength="11" bindinput='handIuput'/></view>
+ <view class="pass">密码：<input type="password" id='password' placeholder="请输入密码" bindinput='handIuput'/></view>
+ <!-- <view class="yan"><input type="passwrod" placeholder="请输入验证码"/><button>获取验证码</button></view> -->
+  </view>
+  <view class="bei">
+    <text>验证码登录</text>
+    <text>忘记密码?</text>
+  </view>
+ <button class="su" bindtap="subim">登录</button>
+
+</view>

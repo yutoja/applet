@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "Kuai":"/components/kuai/kuai"
+  },
+  "navigationBarTitleText": "排行榜"
+}

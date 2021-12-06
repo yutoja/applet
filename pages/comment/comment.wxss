@@ -1,0 +1,170 @@
+.comge{
+  display: flex;
+  align-items: center;
+  height: 100rpx;
+  padding: 10rpx 20rpx;
+}
+.comin{
+  position: relative;
+  width: 80rpx;
+  height: 80rpx;
+}
+.comzim{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  height: 80rpx;
+  width: 80rpx;
+}
+.comcim{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  height: 60rpx;
+  width: 60rpx;
+  border-radius: 50%;
+}
+.combody{
+  flex:1;
+   margin-left: 15rpx;
+   font-size: 28rpx;
+   overflow: hidden;
+   text-overflow: ellipsis;
+   white-space: nowrap;
+}
+.comguan{
+  color: blue;
+}
+.commentheade{
+  display: flex;
+  padding: 20rpx 20rpx;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  background-color: white;
+}
+.headeleft{
+  font-weight: 900;
+}
+.headeright text{
+  padding-left: 40rpx;
+}
+.select{
+  font-weight: 900;
+}
+.commentitem{
+  padding: 10rpx 0;
+}
+.commentscroll{
+  padding-bottom: 100rpx;
+}
+.comitemhe{
+  display: flex;
+  align-items: center;
+  padding: 0 20rpx;
+}
+.comjian{
+  flex: 1;
+  margin-left:20rpx ;
+  font-size: 22rpx;
+  color: #e5e5e5;
+}
+.comname{
+  font-size: 36rpx;
+  color: #696969;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 400rpx;
+}
+.comimg{
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+}
+.comdian{
+  font-size: 24rpx;
+  color: #adadad;
+}
+.commentbody{
+    margin-left:120rpx;
+    margin-top:15rpx;
+    padding-bottom: 15rpx;
+    border-bottom: 1px solid #f6f6f6;
+    padding-right: 40rpx;
+
+}
+.commentpin{
+  font-size: 30rpx;
+  color: #383838;
+}
+.commenthui{
+  color: #4a76b3;
+  font-size: 24rpx;
+  margin-top: 10rpx;
+}
+.icon-jiantou{
+font-size: 20rpx;
+}
+.comfooter{
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  width: 100%;
+  padding: 20rpx;box-sizing: border-box;
+}
+.comfooter input{
+  flex: 1;
+  outline: none;
+}
+.comfooter text{
+  padding: 0 20rpx;
+}
+.red{
+  color: red !important;
+}
+.wu{
+   margin: 100rpx auto; 
+   text-align: center;
+}
+.gedan{
+  display: flex;
+  align-items: center;
+  padding:  0 30rpx;
+  margin-top:35rpx;
+}
+.gedan image{
+  height: 140rpx;
+  width: 140rpx;
+  border-radius: 5%;
+ 
+}
+.gebody{
+  flex: 1;
+  margin-left: 20rpx;
+display: flex;
+flex-direction: column;
+justify-content: center;
+vertical-align: bottom;
+}
+.gedname{
+  color: #4a76b3;
+  font-weight: 300;
+  margin-left: 10rpx;
+}
+.fu{
+  color: #ccc;
+}
+.over{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 400rpx;
+  display: inline-block;
+  vertical-align: bottom;
+}

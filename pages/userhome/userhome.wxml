@@ -1,0 +1,106 @@
+<!-- 引入过滤 -->
+<wxs src="../../utils/com.wxs" module="tools" />
+<!-- 个人页面 -->
+<view class="userhome">
+  <view class="userhead">
+    <image src="{{user.profile.backgroundUrl}}" class="userhi"></image>
+    <view class="userbody">
+      <image src="{{user.profile.avatarUrl}}"></image>
+      <view class="username">{{user.profile.nickname}}</view>
+      <view class="userliao"><text>{{tools.renshu(user.listenSongs)}} 关注 </text><text> {{tools.renshu(user.level)}} 粉丝</text> <text> Lv.{{user.level}}</text></view>
+      
+      <view class="userage">村龄{{tools.nian(user.createDays)}}</view>
+      <view class="userhu">
+        <view class="usergu">+ 关注</view>
+        <view class="userdo">聊天</view>
+      </view>
+    </view>
+  </view>
+  <view class="zhuhe">
+    <view id="0" bindtap="qie">主页</view>
+    <view id="1" bindtap="qie">动态</view>
+    <!-- <view id="2" bindtap="qie">视频</view> -->
+    <text class="zhutia" style="left:{{index*270+200}}rpx"></text>
+  </view>
+  <swiper class="he" style="height: {{height}};" bindchange="chang" current="{{index}}" duration="300">
+    <swiper-item>
+      <view class="userzhu">
+        <view class="userji">
+          <view class="userjz">
+            基本信息
+          </view>
+          <view class="userae">村龄：{{tools.nian(user.createDays)}}</view>
+          <!-- <view class="userwe">地区：浙江 杭州</view> -->
+        </view>
+        <view class="useryi">
+          <view class="userjz">
+            音乐品味
+          </view>
+          <view class="useryiz">
+            <image src="/static/images/123.jpg"></image>
+            <view class="useryic">
+              <view class="userzy">我喜欢的音乐</view>
+              <view class="useryz">{{ids.length}}首</view>
+            </view>
+          </view>
+        </view>
+        <view class="useryi"  wx:if="{{create.length>0}}">
+          <view class="userjz">
+            创建的歌单
+          </view>
+          <view class="useryiz" wx:for="{{create}}" wx:key="item.id"  bindtap="skp" id='{{item.id}}'>
+            <image src="{{item.coverImgUrl}}"></image>
+            <view class="useryic ">
+              <view class="userzy over">{{item.name}}</view>
+              <view class="useryz over">{{item.trackCount}}首，播放{{tools.renshu(item.playCount)}}次</view>
+            </view>
+          </view>
+        </view>
+        <view class="useryi" wx:if="{{chenbi.length>0}}">
+          <view class="userjz">
+            收藏的歌单
+          </view>
+          <view class="useryiz" wx:for="{{chenbi}}" wx:key="item.id"  bindtap="skp" id='{{item.id}}'>
+            <image src="{{item.coverImgUrl}}"></image>
+            <view class="useryic ">
+              <view class="userzy over">{{item.name}}</view>
+              <view class="useryz over">{{item.trackCount}}首，播放{{tools.renshu(item.playCount)}}次</view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </swiper-item>
+    <swiper-item class="color">
+      <view class="qwer">
+        <view class="userdot" wx:for="{{dotai}}" wx:key="{{item.id}}">
+          <view class="dohe">
+            <image src="{{item.user.avatarUrl}}"></image>
+            <view class="dojis">
+              <view class="eih">{{item.user.nickname}}</view>
+              <view>昨天12:19</view>
+            </view>
+            <view class="doei">分享：</view>
+          </view>
+          <view class="dotbody" bindtap="xinqi" id="{{index}}">
+            <view class="yuyan">{{item.json.msg}}</view>
+            <view class="xiaoc" wx:if="{{item.json.resource}}">
+              <image src="{{item.json.resource.coverImgUrl}}"></image>
+              <view class="xiaoca">
+                <view class="chex over heing">{{item.json.resource.title}}</view>
+                <text class="over heing">小日哦如期</text>
+              </view>
+            </view>
+            <view class="gongneng">
+              <text class="iconfont icon-zhuanfa"><text class="incox">{{tools.maxpin(item.info.shareCount)}}</text> </text>
+              <text class="iconfont icon-pinglun1"><text class="incox">{{tools.maxpin(item.info.commentCount)}}</text></text>
+              <text class="iconfont icon-31dianzan {{tools.include(likes,item) ?'red':''}}" id="{{item.info.commentThread.id}}"><text class="incox">{{tools.maxpin(item.info.likedCount)}}</text></text>
+              <text class="iconfont icon-diandian"></text>
+            </view>
+          </view>
+        </view>
+      </view>
+
+    </swiper-item>
+  </swiper>
+
+</view>

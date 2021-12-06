@@ -1,0 +1,205 @@
+.minimg{
+  height: 80rpx;
+  width: 80rpx;
+  border-radius: 50%;
+}
+.over{
+  width: 500rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: inline-block
+}
+.he{
+padding: 0 0 20rpx 0;
+}
+.dohe{
+  display: flex;
+
+}
+.userdot{
+  padding: 20rpx 40rpx;
+  border-bottom: 1rpx solid  #f6f6f6;
+}
+.dohe image{
+   height: 80rpx;
+   width: 80rpx;
+   border-radius: 50%;
+}
+.dojis{
+    font-size: 24rpx;
+    margin-left: 20rpx;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.eih{
+    font-size: 32rpx;
+    color: #4a76b3;
+    margin-bottom: 6rpx;
+    margin-top: -5rpx;
+}
+.doei{
+  font-size: 32rpx;
+  color: #ccc;
+  margin-top: -5rpx;
+  margin-left: 10rpx;
+}
+.mac{
+  padding-bottom:40rpx ;
+}
+.yuyan{
+  /* overflow: hidden;
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  -webkit-line-clamp:4 ;
+  -webkit-box-orient:vertical ;
+  word-break: break-all;
+  white-space: pre-line; */
+  margin-top: 30rpx;
+}
+.gongneng{
+  padding: 30rpx 0;
+}
+.iconfont{
+  position: relative;
+  
+   font-size: 40rpx;
+}
+.iconfont:nth-child(4){
+  margin: 0;
+  margin-left: 90rpx;
+}
+.color{
+  background-color: white;
+}
+.incox{
+  font-size: 20rpx;
+  position: absolute;
+  color: #ccc;
+}
+.xiaoc{
+  display: flex;
+  align-items: center;
+  background-color: #f3f3f3;
+  padding: 20rpx;
+  border-radius: 10rpx;
+  margin: 20rpx 0;
+}
+.xiaoc image{
+  height: 70rpx;
+  width: 70rpx;
+  border-radius: 20%;
+  margin-right:20rpx ;
+}
+.xiaoca{
+  color: #a6a6a6;
+  font-size: 24rpx;
+  display: flex;
+  flex-direction: column;
+}
+.chex{
+  color: black;
+}
+.heing{
+  width: 500rpx;
+}
+.red{
+  color: #fa1a12;
+}
+.dynamiclie{
+  display: flex;
+  padding: 30rpx;
+  position: relative;
+  border-bottom: 1rpx solid  #f6f6f6;
+}
+.dynamiclie view{
+  margin-right: 80rpx;
+}
+.minsize{
+  font-size: 12rpx;
+}
+.dynamictext{
+  position: absolute;
+  bottom: 30rpx;
+  left: 20rpx;
+  width: 80rpx;
+  height: 13rpx;
+  border-radius: 20rpx;
+  background-color: red;
+  z-index: -1;
+  transition: all 0.2s;
+}
+.comfooter{
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  width: 100%;
+  padding: 20rpx;box-sizing: border-box;
+}
+.comfooter input{
+  flex: 1;
+  outline: none;
+}
+.comfooter text{
+  padding: 0 20rpx;
+}
+.comitemhe{
+  display: flex;
+  align-items: center;
+  padding: 0 30rpx;
+}
+.comimg{
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+}
+.comjian{
+  flex: 1;
+  margin-left:20rpx ;
+  font-size: 22rpx;
+  color: #e5e5e5;
+}
+.comname{
+  font-size: 36rpx;
+  color: #696969;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 400rpx;
+}
+.comdian{
+  font-size: 24rpx;
+  color: #adadad;
+}
+.commentbody{
+  margin-left:120rpx;
+  margin-top:15rpx;
+  padding-bottom: 15rpx;
+  border-bottom: 1px solid #f6f6f6;
+  padding-right: 40rpx;
+
+}
+.commentpin{
+  font-size: 30rpx;
+  color: #383838;
+}
+.commenthui{
+  color: #4a76b3;
+  font-size: 24rpx;
+  margin-top: 10rpx;
+}
+.czahe{
+  padding: 30rpx;
+}
+.icon-jiantou{
+  font-size: 26rpx;
+}
+.userlie{
+   display: flex;align-items: center;
+}
+.userlt{
+  margin-left: 30rpx;
+}

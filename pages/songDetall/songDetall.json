@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "Music":"/components/muscilis/musiclis"
+  },
+  "navigationBarBackgroundColor": "#909090"
+}

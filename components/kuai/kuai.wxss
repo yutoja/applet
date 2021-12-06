@@ -1,0 +1,46 @@
+.over{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 190rpx;
+}
+.kuai{
+background-color: white;
+border-radius: 25rpx;
+padding: 20rpx 10rpx;
+margin: 20rpx 0;
+}
+.kuhe{
+ margin-bottom: 20rpx;
+  font-weight: 900;
+  padding-left: 12rpx;
+}
+.kubo{
+  display: flex;
+  flex-wrap: wrap;
+}
+.kubz{
+  position: relative; 
+  margin: 0 11rpx;
+  margin-bottom: 20rpx;
+ 
+}
+.kubz image{
+   height: 200rpx;
+   width: 200rpx;
+   border-radius: 20rpx;
+}
+.kuti{
+   position: absolute;
+   top: 7rpx;
+   right: 10rpx;
+   font-size: 24rpx;
+   padding: 0 10rpx;
+   background-color:rgba(0.5, 0.5, 0.5, 0.2) ;
+   color: white;
+   border-radius:40rpx ;
+}
+.kudi{
+  font-size: 28rpx;
+  margin-left:2rpx ;
+}

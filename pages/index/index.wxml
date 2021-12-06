@@ -1,0 +1,64 @@
+<view class="index">
+  <!-- 搜索框 -->
+  <view class="header">
+    <view class="search" bindtap="toSearch">点击搜索</view>
+  </view>
+<!-- 轮播图区域 -->
+<swiper class="banners" autoplay current circular indicator-dots indicator-color='ivory' indicator-active-color='#d43c33'>
+<swiper-item wx:for="{{banners}}" wx:key='index'><image src="{{item.imageUrl}}"></image></swiper-item>
+</swiper>
+<!-- 导航图标 -->
+<view class="navgi">
+  <view class="navitem" bindtap="mei">
+    <text class="iconfont icon-shouye"></text>
+    <text>每日推荐</text>
+  </view>
+  <view class="navitem" bindtap="skipp">
+    <text class="iconfont icon-yinleliebiao-"></text>
+    <text>歌单</text>
+  </view>
+  <view class="navitem" bindtap="paihan">
+    <text class="iconfont icon-paixingbang"></text>
+    <text>排行榜</text>
+  </view>
+  <!-- <view class="navitem">
+    <text class="iconfont icon-diantai1"></text>
+    <text>电台</text>
+  </view>
+  <view class="navitem">
+    <text class="iconfont icon-zhibo"></text>
+    <text>直播</text>
+  </view> -->
+</view>
+<!-- 内容区 -->
+<view class="com">
+  <!-- 头部区 -->
+<Navhe title='推荐歌单' nav='为你每日推荐'></Navhe>
+<!-- 主体区 -->
+<view class="ghg"> <scroll-view class="scroll" enable-flex scroll-x>
+    <view class="scrollitem" wx:for="{{result}}" wx:key='{{id}}' bindtap="skp" id='{{item.id}}'>
+      <view><image src="{{item.picUrl}}" class="scrollimg"></image></view>
+      <view class="scrolltxt">{{item.name}}</view>
+    </view>
+  </scroll-view>
+</view>
+
+</view>
+<!-- 排行榜 -->
+<Navhe title='排行榜' nav='热歌风向标' ></Navhe>
+<swiper class="paihan" next-margin="50rpx">
+   <swiper-item wx:for="{{list}}" wx:key='id'>
+     <view class="paina" bindtap="skp" id='{{item.id}}'>{{item.name}}<text>></text></view>
+   <view wx:for="{{item.data}}" wx:for-item="musicitem" wx:key='{{item.id}}'>
+     <view class="pailie" bindtap="skip" id="{{musicitem.id}}" data-dt="{{musicitem.dt}}">
+       <image src="{{musicitem.al.picUrl}}" class="pailie-im"></image>
+       <text class="pailie-bo">
+         <text >{{index+1}}</text>
+         <text class="over">{{musicitem.name}}</text>
+       </text>
+     </view>
+    </view>
+   </swiper-item>
+
+</swiper>
+</view>

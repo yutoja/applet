@@ -1,0 +1,7 @@
+<view class="com-h">
+  <view class="com-h-t">{{title}}</view>
+ <view class="com-ti">
+   <view class="com-h-n">{{nav}}</view>
+  <view class="com-h-c" bindtap="skip" data-name="{{title}}">查看更多</view>
+  </view>
+  </view>

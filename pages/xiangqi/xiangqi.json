@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "Listen":"/components/listen/listen",
+    "Music":"/components/muscilis/musiclis"
+  }
+}

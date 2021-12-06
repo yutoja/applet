@@ -1,0 +1,12 @@
+<view class="kuai">
+  <view class="kuhe">{{name}}</view>
+  <view class="kubo">
+     <view class="kubz" wx:for="{{shu}}" wx:key='{{item.id}}' bindtap="skip" id="{{item.id}}">
+     <image src="{{item.coverImgUrl}}"></image>
+     <view class="kuti">
+       {{item.updateFrequency}}
+     </view>
+     <view class="kudi over">{{item.name}}</view>
+     </view>
+  </view>
+</view>

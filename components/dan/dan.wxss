@@ -1,0 +1,33 @@
+@import '/static/iconfont/iconfont.wxss';
+.over{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 500rpx;
+}
+.im{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 10rpx;
+}
+.black{
+  color: #3a3a3a;
+  font-weight: bolder;
+}
+.gedbo{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10rpx 0;
+  overflow: hidden;
+}
+.gebb{
+  display: flex;
+}
+.gebbv{
+  margin-left: 15rpx; 
+   color: #909090;
+}
+.gebbv>view:nth-child(1){
+  margin-bottom:25rpx ;
+}

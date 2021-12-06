@@ -1,0 +1,18 @@
+  // 处理年份
+  function nian(value){
+    return  value>365?parseInt(value/365)+"年"+(value%365+"天"):value+"天"
+  }
+function renshu(value) {
+  return  value>10000?parseInt(value/10000)+"万":value
+}
+function maxpin(value) {
+  return  value>999?"999+":value
+}
+function include(data,value) {
+  console.log(typeof data)
+  return data.includes(value)
+}
+module.exports.nian = nian
+module.exports.renshu = renshu
+module.exports.include = include
+module.exports.maxpin = maxpin

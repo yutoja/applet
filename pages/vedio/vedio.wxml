@@ -1,0 +1,21 @@
+<scroll-view scroll-y class="vedio" bindscrolltolower="scroll" scroll-left="false" enable-back-to-top>
+  <scroll-view scroll-x class="desat" style="width: 100%;">
+    <view class="nav-de {{item.id==navId?'borde':''}}" wx:for="{{videoGroupList}}" wx:key="id" bindtap="tigindex" data-index="{{index}}">{{item.name}}</view>
+    <!-- <text class="zhutia" style="left:{{index*150}}rpx"></text> -->
+  </scroll-view>
+  <swiper style="height: {{height}};" bindchange="chang" bindanimationfinish="finsh" current="{{index}}" duration="300" >
+    <swiper-item wx:for="{{videoGroupList}}" wx:key="{{id}}" >
+      <view class="vediobody {{'emif'+index}}" wx-if="{{videodata[videoGroupList[index].id].length>0}}">
+        <view class="vedioItem" 
+        wx:for="{{videodata[videoGroupList[index].id]}}" 
+        wx:key="id" 
+        bindtap="skip" 
+        id="{{item.data.vid}}">
+          <image src="{{item.data.coverUrl}}"></image>
+          <text class="vediotext">{{item.data.title}}</text>
+        </view>
+      </view>
+      <view  class="xiaox" wx:else><List></List></view>
+    </swiper-item>
+  </swiper>
+</scroll-view>

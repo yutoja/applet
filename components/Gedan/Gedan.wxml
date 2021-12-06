@@ -1,0 +1,7 @@
+<view class="gedan">
+   <view class="gedanh">
+    <text>{{name}}({{quantity}}个)</text>
+    <text class='iconfont icon-diandian'></text>
+   </view>
+
+</view>

@@ -1,0 +1,52 @@
+<view class="songDetailContainer">
+  <view class="author">{{dat[0].ar[0].name}}</view>
+  <view class="zhon">
+    <view class="songbod" wx:if="{{!pir}}">
+      <image class="needle {{isplay?'play':''}}" src="/static/images/stylus.png"></image>
+      <view class="discContainer {{isplay?'':'rou'}}" bindtap="rout">
+        <image class="disc" src="/static/images/disc.png"></image>
+        <image class="musicimg" src="{{dat[0].al.picUrl}}"></image>
+      </view>
+    </view>
+    <view wx:if="{{pir}}">
+      <scroll-view wx:if="{{gezi}}" class="pir" scroll-y scroll-into-view="t-{{inde-4}}" scroll-with-animation>
+        <view class="pirz {{inde-1==index?'dazhu':''}}" wx:for="{{gezi}}" wx:key="{{item.time}}" id="t-{{index}}">{{item.lyri}}</view>
+      </scroll-view>
+      <view wx:else class="jiazai">正在加载中...
+      </view>
+    </view>
+
+
+  </view>
+  <view class="songlie">
+    <text class="iconfont icon-aixin"></text>
+    <text class="iconfont icon-xiazai" bindtap="download"></text>
+    <text class="iconfont minsize" bindtap="zi">词</text>
+    <text class="iconfont icon-pinglun" bindtap="skip" id="{{dat[0].id}}"></text>
+    <text class="iconfont icon-diandian"></text>
+  </view>
+  <view class="bod">
+    <text>{{currentTime}}</text>
+    <view class="reage" bindtouchmove="move" bindtouchend="touchend" bindtouchstart="musictap">
+      <view class="radiu" style="left:{{sc}}%"></view>
+      <view class="jing" style="width:{{sc}}%"></view>
+    </view>
+    <text>{{startTime}}</text>
+  </view>
+  <!-- 播放类型提示 -->
+  <view class="tishi" wx:if="{{tidi}}">{{tishi[zin]}}</view>
+  <!-- 低部播放栏 -->
+  <view class="footer">
+    <text class="iconfont {{inco[zin]}}" bindtap="ino"></text>
+    <text class="iconfont icon-24gf-previous" bindtap="xiao" id='left'></text>
+    <text class="iconfont  big {{isplay?'icon-zanting6':'icon-bofang'}}" bindtap="rout"></text>
+    <text class="iconfont icon-24gf-next" bindtap="xiao" id='right'></text>
+    <text class="iconfont icon-liebiao" bindtap="tigge"></text>
+  </view>
+  <!-- 播放列表 -->
+  <view class="list {{tigge?'top':''}}">
+    <view class="iconfont icon-weibiaoti-" bindtap="tigge"></view>
+    <Music wx:if="tigge" list="{{list}}" music="{{music}}" bindmyremove="remove">
+    </Music>
+  </view>
+</view>

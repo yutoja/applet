@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "Gedan":"/components/Gedan/Gedan",
+    "Dan":"/components/dan/dan"
+  }
+}

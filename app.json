@@ -1,0 +1,54 @@
+{
+  "pages": [ 
+   "pages/index/index",
+    "pages/vedio/vedio",
+    "pages/vodiedata/vodiedata",
+   "pages/sos/sos",
+    "pages/destall/destall",
+    "pages/dynamic/dynamic",
+    "pages/userhome/userhome",
+    "pages/list/list",
+    "pages/xiangqi/xiangqi",
+    "pages/recommend/recommend",
+    "pages/comment/comment",
+    "pages/songDetall/songDetall",
+    "pages/guanz/guanz",
+    "pages/dangru/dengru",
+    "pages/user/user"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#d43c33",
+    "navigationBarTitleText": "音乐",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "selectedColor": "#c10d0c",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "./static/images/首页2.png",
+        "selectedIconPath": "./static/images/首页.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "我的",
+        "iconPath": "./static/images/我的2.png",
+        "selectedIconPath": "./static/images/我的.png"
+      },
+      {
+        "pagePath": "pages/vedio/vedio",
+        "text": "视频",
+        "iconPath": "./static/images/视频.png",
+        "selectedIconPath": "./static/images/视频 1.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents",
+  "requiredBackgroundModes": [
+    "audio"
+  ]
+}

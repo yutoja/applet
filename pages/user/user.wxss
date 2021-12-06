@@ -1,0 +1,101 @@
+
+.minsize{
+  font-size: 24rpx;
+}
+.over{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 500rpx;
+}
+.user{
+  padding: 0 3%;
+  height: 100vh;
+  background-color: rgba(238, 238, 238, 0.555);
+}
+.tou{
+ text-align: center;
+ width: 100%;
+ height: 200rpx;
+ position: relative;
+ border-radius: 25rpx;
+ margin-top: 100rpx;
+ background-color: white;
+ display: inline-block;
+}
+.tou>image{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  position: absolute;
+  top: -50rpx;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.tou-name{
+  font-size: 50rpx;
+  margin-top: 50rpx;
+  margin-bottom: 25rpx;
+}
+.tou-fe>view{
+   display: inline-block;
+   color: #ccc;
+}
+.zhon{
+  margin: 0 10rpx;
+  color: rgb(226, 226, 226);
+}
+.fe-t{
+  margin-right:10rpx ;
+}
+.music{
+  background-color: white;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 3%;
+  border-radius: 25rpx;
+  margin-top:20rpx ;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.gebbv{
+  display: flex;
+}
+.gebbu{
+  color: #ccc;
+  margin-left:15rpx ;
+}
+.gebbu>view:nth-child(1){
+  margin-bottom:25rpx ;
+}
+.musicimg{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 10rpx;
+}
+.xindong{
+  padding: 3rpx;
+  border: 1px solid #ccc;
+  border-radius:27rpx;
+  vertical-align: middle;
+}
+.xindo{
+  font-size: 24rpx;
+  margin-left: 10rpx;
+}
+.dann{
+  background-color: white;
+  width: 100%;
+  box-sizing: border-box;
+  padding:2% 3%;
+  border-radius: 25rpx;
+  margin-top:20rpx ;
+}
+.gongbu{
+  height: 50rpx;
+  width: 50rpx;
+  position: fixed;
+  left: 20rpx;
+  top: 20rpx;
+}

@@ -1,0 +1,10 @@
+<view class="gedbo">
+     <view class="gebb">
+     <image src="{{geimg}}" class="im"></image>
+     <view class="gebbv">
+       <view class="over black">{{gename}}</view>
+       <view class="minsize over">{{gequantity}}首，by  {{createor}}</view>
+     </view>
+    </view>
+    <text class='iconfont icon-diandian'></text>
+   </view>

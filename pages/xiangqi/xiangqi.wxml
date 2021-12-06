@@ -1,0 +1,74 @@
+<view class="xiangqi {{show?'':'dis'}}">
+  <view class="xianghe">
+    <view class="left">
+      <image src="{{listsongs.coverImgUrl}}"></image>
+      <text class="leftxin">{{shu}}</text>
+    </view>
+    <view class="right">
+      <view class="righthe over">{{listsongs.name}}</view>
+      <view>
+        <view class="rightbo" id="{{listsongs.creator.userId}}"  bindtap="skp">
+          <image src="{{listsongs.creator.backgroundUrl}}"></image>
+          <text class="over" >{{listsongs.creator.nickname}}</text>
+        </view>
+        <view class="rightfoot">{{listsongs.description}}</view>
+      </view>
+    </view>
+  </view>
+  <view class="list">
+    <view>
+      <text class="iconfont icon-tongbushoucang"></text>
+      {{listsongs.playCount>10000?(listsongs.playCount-listsongs.playCount%10000)/10000+"万":listsongs.playCount}}
+    </view>
+    <text class="zhon">|</text>
+    <view bindtap="skip" id="{{listsongs.id}}">
+      <text class="iconfont icon-pinglun1"></text>
+      {{listsongs.commentCount>10000?(listsongs.commentCount-listsongs.commentCount%10000)/10000+"万":listsongs.commentCount}}
+    </view>
+    <text class="zhon">|</text>
+    <view>
+      <text class="iconfont icon-fenxiang"></text>
+      {{listsongs.shareCount>10000?(listsongs.shareCount-listsongs.shareCount%10000)/10000+"万":listsongs.shareCount}}
+    </view>
+  </view>
+  <view class="xiangbody">
+    <view class="listhe">
+  <view class="iconfont icon-24gf-playCircle" bindtap="bofa"></view>
+  <view class="listhez">播放全部<text class="color">({{listsongs.trackIds.length}})</text></view>
+  <view class="iconfont icon-xiazai1 color"></view>
+  <view class="iconfont icon-wanchengyunda color"></view>
+  </view>
+    <view class="xiaitem" wx:for="{{danl}}" wx:key="{{item.id}}" >
+       <view class="xiaindex">{{index+1}}</view>
+       <view class="xiaitbo" bindtap="toSongDetail" data-song="{{item.id}}" 
+    data-dt="{{item.dt}}">
+       <view>{{item.name}}</view>
+       <view class="xiaaina">
+       <text wx:for="{{item.ar}}" wx:for-item="musicitem" wx:key="{{index}}">{{musicitem.name}}</text>
+       </view>
+       </view>
+       <text class="iconfont icon-kaishi {{songs.id==item.id?'red':''}}" bindtap="bbfa" id="{{index}}"></text>
+    </view>
+  </view>
+  <view class="xiafooter">
+     <view class="footim" data-song="{{songs.id}}" bindtap="toSongDetail" data-dt="{{songs.dt}}">
+     <image src="/static/images/disc.png"></image>
+     <image src="{{songs.al.picUrl}}"></image>
+     </view>
+     <view class="footrename over">
+     {{songs.name}}<text class="namex ">- {{songs.ar[0].name}}</text>
+     </view>
+     <view class="fooetrri iconfont {{isplay?'icon-zanting':'icon-kaishi'}}" bindtap="stop">
+     </view>
+     <view class="fooetrri iconfont icon-24gf-playlistMusic" bindtap="tigge"></view>
+  </view>
+</view>
+<view class="cente"><Listen class="{{show?'dis':''}}"></Listen></view>
+ <!-- 播放列表 -->
+ <view class="listt {{tigge?'top':''}}">
+    <view class="iconfont icon-weibiaoti- xiatap" bindtap="tigge"></view>
+    <Music wx:if="tigge" list="{{list}}" music="{{music}}" bindmyremove="remove">
+    </Music>
+  </view>
+
+

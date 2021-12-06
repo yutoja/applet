@@ -1,0 +1,55 @@
+<view class="comment">
+  <view class="gedan" wx:if="{{!qun.length}}">
+    <image src="{{qun.coverImgUrl}}"></image>
+    <view class="gebody">
+      <view class="over">{{qun.description}}</view>
+      <text bindtap="skppp" id="{{qun.creator.userId}}">
+        by<text class="gedname over" >{{qun.creator.nickname}}</text>
+      </text>
+    </view>
+    <view class="fu">></view>
+  </view>
+  <view class="comge" wx:else>
+    <view class="comin">
+      <image src="/static/images/disc.png" class="comzim"></image>
+      <image src="{{qun[0].al.picUrl}}" class="comcim"></image>
+    </view>
+    <view class="combody">{{qun[0].name}}</view>
+    <view class="comguan" id="{{qun[0].id}}">关注</view>
+  </view>
+
+  <view wx:if="{{ping.xin.length>1}}">
+    <view class="commentheade">
+      <text class="headeleft">评论区</text>
+      <view class="headeright">
+        <!-- <text class="{{gee=='tui'?'select':''}}"  id='tui' bindtap="girr">推荐</text> -->
+        <text class="{{gee=='hot'?'select':''}}" id='hot' bindtap="girr">最热</text>
+        <text class="{{gee=='xin'?'select':''}}" id='xin' bindtap="girr">最新</text>
+      </view>
+    </view>
+    <scroll-view scroll-y class="commentscroll" refresher-enabled bindrefresherrefresh="xiala" wx:if="{{ping[gee].length>1}}">
+      <view class="commentitem" wx:for="{{ping[gee]}}" wx:key="{{item.id}}" >
+        <view class="comitemhe">
+          <image src="{{item.user.avatarUrl}}" class="comimg"></image>
+          <view class="comjian">
+            <view class="comname" id="{{item.user.userId}}"  bindtap="skp">{{item.user.nickname}}</view>
+            <text>{{item.timeStr}}</text>
+          </view>
+          <view class="comdian">
+            {{item.likedCount}}
+            <text class="iconfont icon-31dianzan {{item.liked?'red':''}}"></text>
+          </view>
+        </view>
+        <view class="commentbody">
+          <view class="commentpin">{{item.content}}</view>
+          <!-- <view class="commenthui">7条回复 <text class="iconfont icon-jiantou"></text> </view> -->
+        </view>
+      </view>
+    </scroll-view><view class="wu" wx:else>暂无评论,欢迎抢沙发</view>
+  </view>
+  <view class="wu" wx:else="">暂无评论,欢迎抢沙发</view>
+  <view class="comfooter">
+    <input type="text" placeholder="想要疯狂色彩，何不任性呐喊" />
+    <text>发送</text>
+  </view>
+</view>

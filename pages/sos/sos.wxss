@@ -1,0 +1,196 @@
+.sear{
+  /* padding: 0 15rpx; */
+}
+.header{
+  display: flex;
+  height: 60rpx;
+  line-height: 60rpx;
+  padding:10rpx ;
+}
+.searchinput{
+  flex: 1;
+  border-radius: 30rpx;
+  position: relative;
+}
+.cancel{
+  width: 100rpx;
+}
+.seariconfont{
+   position: absolute;
+   left: 15rpx;
+}
+.searchinput input{
+  margin-left:60rpx ;
+  height: 60rpx;
+}
+.hotContainer .title{
+  font-size: 28rpx;
+  line-height: 80rpx;
+  border-bottom: 1rpx solid #eee;
+}
+.hotList{
+  display: flex;
+  flex-wrap: wrap;
+}
+.hotItem{
+  width: 50%;
+  line-height:80rpx;
+  font-size: 26rpx;
+}
+.hotItem .order{
+  margin: 0 10rpx;
+}
+.hotItem .iconUel{
+  width: 35rpx;
+  height: 20rpx;
+  margin-left: 10rpx;
+}
+.searchContent{
+  color: rgba(107, 100, 238, 0.96);
+  line-height: 80rpx;
+  font-size: 24rpx;
+  border-bottom: 1rpx solid #d43c33;
+}
+.searchItem{
+  line-height: 80rpx;
+  display: flex;
+
+}
+.searchItem .content{
+  flex: 1;
+  margin-left: 20rpx;
+  border-bottom: 1rpx solid #eee;
+  font-size: 26rpx;
+}
+.history{
+  position: relative;
+  display: flex;
+  flex-wrap:wrap ;
+
+}
+.history .item{
+  font-size: 28rpx;
+  line-height: 50rpx;
+}
+.history .title{
+  font-size: 28rpx;
+}
+.history .historyItem{
+  font-size: 26rpx;
+  background: #ededed;
+  margin-left: 20rpx;
+  padding: 0 30rpx;
+  border-radius: 20rpx;
+  margin-top: 7rpx;
+  margin-bottom: 20rpx;
+}
+.history .delect{
+   position: absolute;
+   right: 15rpx;
+   bottom: 10rpx;
+   font-size: 36rpx;
+}
+.result{
+  
+  height: 100vh;
+}
+.clear{
+  position: absolute;
+  right: 30rpx;
+  top: 0;
+  font-size: 30rpx;
+  z-index: 999;
+}
+.scrollnav{
+  position: relative;
+  display: flex;
+  width: 100%;
+ justify-content:space-evenly;
+}
+.navitem{
+  padding: 15rpx 20rpx;
+}
+.navText{
+  transition: all 0.2s;
+  height: 10rpx;
+  width: 100rpx;
+  background-color: red;
+  border-radius: 20rpx;
+  position: absolute;
+  bottom: 15rpx;
+  left: 100rpx;
+  z-index: 1;
+}
+.body{
+  padding: 0 30rpx;
+}
+.bodyit{
+  background-color: white;
+  padding: 0 30rpx;
+}
+.boitem{
+  padding: 30rpx 0;
+}
+.bohead{
+  margin-bottom: 20rpx;  
+  font-size: 34rpx;
+}
+.bouser{
+  font-size: 27rpx;
+  color: #828282;
+}
+.firItem image{
+   height: 100rpx;
+   width: 100rpx;
+   border-radius: 15rpx;
+}
+.firItem{
+  display: flex;
+  padding:0 30rpx;
+  margin-bottom:30rpx  ;
+  background-color: white;
+}
+.firbody{
+  margin-left: 20rpx;
+}
+.firhe{
+  font-size: 34rpx;
+  margin-bottom: 25rpx;
+}
+.firbo{
+  font-size: 24rpx;
+}
+.shipi{
+    padding: 30rpx;
+}
+.bodsitem{
+  padding: 20rpx 0;
+  border-bottom: 1rpx solid #ccc;
+  background-color: white;
+}
+.shhe{
+  overflow: hidden;
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  -webkit-line-clamp:2 ;
+  -webkit-box-orient:vertical ;
+  word-break: break-all;
+ margin-bottom: 20rpx;
+}
+.pishmg{
+  width: 100%;
+ height: 400rpx;
+ border-radius: 15rpx;
+}
+.over{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+ width: 540rpx;
+}
+.xiao{
+  margin-left: 50%;
+}
+.her{
+  height: 80vh;
+}

@@ -1,0 +1,98 @@
+<view class="dynamic">
+  <view class="top">
+    <view class="userdot">
+      <view class="dohe">
+        <image src="{{home.user.avatarUrl}}" ></image>
+        <view class="dojis">
+          <view class="eih">{{home.user.nickname}}</view>
+          <view>昨天12:</view>
+        </view>
+      </view>
+      <view class="dotbody">
+        <view class="yuyan">{{home.json.msg}}</view>
+        <view class="xiaoc" wx:if="{{home.json.resource}}">
+          <image src="{{home.json.resource.coverImgUrl}}"></image>
+          <view class="xiaoca">
+            <view class="chex over heing">{{home.json.resource.title}}</view>
+            <text class="over heing">{{home.json.resource.subTitle}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="bottom">
+    <view class="dynamiclie">
+      <view id="0" bindtap="qie">评论<text class="minsize">{{pinglu.total}}</text></view>
+      <view id="1" bindtap="qie">转发<text class="minsize">{{home.info.shareCount}}</text></view>
+      <view id="2" bindtap="qie">赞<text class="minsize">{{home.info.likedCount}}</text></view>
+      <text class="dynamictext" style="left:{{index*150+24}}rpx"></text>
+    </view>
+    <swiper style="height: {{height}};" bindchange="chang" current="{{index}}" duration="300" class="mac">
+      <swiper-item class="dynamicza">
+      <view class="jing" wx:if="{{pinglu.hotComments.length>0||pinglu.comments.length>0}}"> 
+     
+      <view class="czahe" wx:if="{{pinglu.hotComments.length>0}}">精彩评论</view>
+        <view class="cazbody" wx:for="{{pinglu.hotComments}}" wx:key="{{item.id}}" wx:if="{{pinglu.hotComments.length>0}}">
+          <view class="comitemhe">
+            <image src="{{item.user.avatarUrl}}" class="comimg"></image>
+            <view class="comjian">
+              <view class="comname">{{item.user.nickname}}</view>
+              <text>{{item.timeStr}}</text>
+            </view>
+            <view class="comdian">
+              {{item.likedCount}}
+              <text class="iconfont icon-31dianzan"></text>
+            </view>
+          </view>
+          <view class="commentbody">
+            <view class="commentpin">{{item.content}}</view>
+            <view class="commenthui">7条回复 <text class="iconfont icon-jiantou"></text> </view>
+          </view>
+        </view>
+        <view class="czahe" wx:if="{{pinglu.comments.length>0}}">最新评论</view>
+        <view class="cazbody" wx:for="{{pinglu.comments}}" wx:key="{{item.id}}" wx:if="{{pinglu.comments.length>0}}">
+          <view class="comitemhe">
+            <image src="{{item.user.avatarUrl}}" class="comimg"></image>
+            <view class="comjian">
+              <view class="comname">{{item.user.nickname}}</view>
+              <text>{{item.timeStr}}</text>
+            </view>
+            <view class="comdian">
+              {{item.likedCount}}
+              <text class="iconfont icon-31dianzan"></text>
+            </view>
+          </view>
+          <view class="commentbody">
+            <view class="commentpin">{{item.content}}</view>
+            <view class="commenthui">7条回复 <text class="iconfont icon-jiantou"></text> </view>
+          </view>
+        </view>
+        </view>
+      </swiper-item>
+      <swiper-item>
+        <view class="cazbody">
+          <view class="comitemhe">
+            <image src="/static/images/123.jpg" class="comimg"></image>
+            <view class="comjian">
+              <view class="comname">32</view>
+              <text>123</text>
+            </view>
+          </view>
+          <view class="commentbody">
+            <view class="commentpin">1231</view>
+          </view>
+        </view>
+      </swiper-item>
+      <swiper-item>
+         <view class="userlie">
+         <image src="/static/images/123.jpg" class="minimg"></image>
+         <view class="userlt over">原来你是</view>
+         </view>
+      </swiper-item>
+    </swiper>
+  </view>
+  <view class="comfooter">
+    <input type="text" placeholder="想要疯狂色彩，何不任性呐喊" />
+    <text>发送</text>
+  </view>
+</view>

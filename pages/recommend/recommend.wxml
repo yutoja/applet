@@ -1,0 +1,30 @@
+<view class="recomment">
+  <!-- 头部 -->
+<view class="head">
+<image src="../../static/images/recommendSong.jpg"></image>
+<view class="date">
+  <text class="day">{{month}} / </text>
+  <text class="day">{{day}}</text>
+</view>
+
+</view>
+<!--  列表区域 -->
+<view class="Listcontainer">
+  <view class="listHeader">
+    <text>播放全部</text>
+    <text class="changeMore">多选</text>
+  </view>
+  <!-- 内容区 -->
+  <scroll-view scroll-y class="listScroll">
+    <view class="scrollItem" wx:for="{{liebiao.dailySongs}}" bindtap="toSongDetail" data-song="{{item.id}}" 
+    data-dt="{{item.dt}}">
+      <image src="{{item.al.picUrl}}"></image>
+      <view class="musicInfo">
+        <text class="musicName">{{item.name}}</text>
+        <text class="author">{{item.ar[0].name}}</text>
+      </view>
+      <text class="iconfont icon-diandian"></text>
+    </view>
+  </scroll-view>
+</view>
+</view>

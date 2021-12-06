@@ -1,0 +1,255 @@
+.vedio{
+  height: 100vh;
+  width: 100vw;
+  background-color: black;
+  color: white;
+}
+.item{
+  margin-top: 279rpx;
+  height: 400rpx;
+  width: 100%;
+}
+.vedItem{
+  position: relative;
+}
+.user image{
+  width: 67rpx;
+  border-radius: 50%;
+  border: 1rpx solid white;
+  height: 67rpx;
+}
+.xinxi{
+    margin-top: 205rpx;  margin-left: 30rpx;
+}
+.user{
+
+  display: flex;
+  align-items: center;
+ margin-bottom: 26rpx;
+}
+.username{
+  margin-left: 20rpx;
+}
+.asdie{
+  position: absolute;
+  right: 35rpx;
+  bottom: 175rpx;
+}
+.asdieItem{
+  margin-bottom: 20rpx;
+  text-align: center;
+}
+.iconfont{
+  font-size: 65rpx;
+}
+.ravedio{
+  position: relative;
+  padding: 20rpx 0;
+  width: 100vw;
+margin-top: 30rpx;
+}
+.radio{
+  position: absolute;
+  border-radius: 50%;
+  height: 10rpx;
+  width: 10rpx;
+  top: 17rpx;
+  left: 0;
+  background-color: white;
+}
+.xian{
+  position: absolute;
+  border-top:1rpx solid #262626 ;
+  width: 100%;
+}
+.da{
+  transform: scale(3);
+}
+.raxian{
+  position: absolute;
+  top: 20rpx;
+  border-top: 1rpx solid rgb(228, 228, 228);
+}
+.vedioti{
+  margin-left: 30rpx;
+  margin-top: 25rpx;
+}
+.icon-yinle1{
+  font-size:24rpx ;
+}
+.zhan{
+  position: absolute;
+  left: 50%;
+  top: 35%;
+  transform: translate(-50%);
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 50%;
+  border: 10rpx solid #ccc;
+  text-align: center;
+}
+.icon-sanjiaoxing1{
+  position: absolute;
+  left: 55%;
+  top: 35%;
+  transform: translate(-50%) rotate(90deg);
+  color: #ccc;
+}
+.commentheade{
+  display: flex;
+  padding: 20rpx 20rpx;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  background-color: white;
+}
+.headeleft{
+  font-weight: 900;
+}
+.headeright text{
+  padding-left: 40rpx;
+}
+.select{
+  font-weight: 900;
+}
+.commentitem{
+  padding: 10rpx 0;
+}
+.commentscroll{
+ height: 500rpx;
+}
+.comitemhe{
+  display: flex;
+  align-items: center;
+  padding: 0 20rpx;
+}
+.comjian{
+  flex: 1;
+  margin-left:20rpx ;
+  font-size: 22rpx;
+  color: #e5e5e5;
+}
+.comname{
+  font-size: 36rpx;
+  color: #696969;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 400rpx;
+}
+.comimg{
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+}
+.comdian{
+  font-size: 24rpx;
+  color: #adadad;
+}
+.commentbody{
+    margin-left:120rpx;
+    margin-top:15rpx;
+    padding-bottom: 15rpx;
+    border-bottom: 1px solid #f6f6f6;
+    padding-right: 40rpx;
+
+}
+.commentpin{
+  font-size: 30rpx;
+  color: #383838;
+}
+.commenthui{
+  color: #4a76b3;
+  font-size: 24rpx;
+  margin-top: 10rpx;
+}
+.icon-jiantou{
+font-size: 20rpx;
+}
+.comfooter{
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  width: 100%;
+  padding: 20rpx;
+  box-sizing: border-box;
+}
+.comfooter input{
+  flex: 1;
+  outline: none;
+}
+.comfooter text{
+  padding: 0 20rpx;
+}
+.red{
+  color: red !important;
+}
+.wu{
+   position: relative;
+   left: 25%;
+}
+.wuu{
+  position: relative;
+  left: 50%;
+}
+.gedan{
+  display: flex;
+  align-items: center;
+  padding:  0 30rpx;
+  margin-top:35rpx;
+}
+.gedan image{
+  height: 140rpx;
+  width: 140rpx;
+  border-radius: 5%;
+ 
+}
+.gebody{
+  flex: 1;
+  margin-left: 20rpx;
+display: flex;
+flex-direction: column;
+justify-content: center;
+vertical-align: bottom;
+}
+.gedname{
+  color: #4a76b3;
+  font-weight: 300;
+  margin-left: 10rpx;
+}
+.xiaol{
+  margin: 0 auto;
+}
+.nav{
+  text-align: center;
+}
+.fu{
+  color: #ccc;
+}
+.over{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: inline-block;
+  vertical-align: bottom;
+}
+.whi{
+  width: 400rpx;
+}
+.pilu{
+  position: fixed;
+  bottom: -100%;
+  width: 100vw;
+  height: 60%;
+  transition: all 0.3s;
+  background-color: white;
+}
+.pu{
+  bottom: 0;
+}
+.xida{
+  position: static !important;
+}

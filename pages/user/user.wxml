@@ -1,0 +1,41 @@
+<view class="user">
+  <!-- 头部 -->
+  <view class="tou">
+    <image src="{{user.profile.avatarUrl}}"></image>
+    <view class="tou-name">{{user.profile.nickname}}</view>
+    <view class="tou-fe">
+      <view><text class="fe-t">{{user.profile.follows}}</text>关注</view><text class="zhon">|</text>
+      <view><text class="fe-t">{{user.profile.followeds}}</text>粉丝</view><text class="zhon">|</text>
+      <view>Lv.0</view>
+    </view>
+  </view>
+  <image src="/static/images/.png" class="gongbu" bindtap="guangbi"></image>
+  <!-- 喜欢的音乐 -->
+  <view class="music">
+    <view class="gebbv">
+      <image src="{{like[0].coverImgUrl}}" class="musicimg"></image>
+      <view class="gebbu">
+        <view class="over">{{like[0].name}}</view>
+        <view class="minsize over">{{like[0].trackCount}}首</view>
+      </view>
+
+    </view>
+    <text class="xindong">
+      <text class="iconfont icon-xindong"></text><text class="xindo">心动模式</text>
+    </text>
+  </view>
+  <!-- 歌单 -->
+  <!-- <Gedan name='收藏歌单' geimg='/static/images/123.jpg' gequantity='12' quantity='1' createor='wu' gename='年' >
+  </Gedan> -->
+<view class="dann">
+    <Gedan 
+    name='收藏歌单' 
+    quantity='{{dan.length}}'></Gedan>
+    <Dan  
+    geimg='{{item.coverImgUrl}}' 
+    createor='{{item.creator.nickname}}' 
+    gename='{{item.name}}' 
+    gequantity='{{item.trackCount}}'  
+    wx:for="{{dan}}"  bindtap="skp" id='{{item.id}}'></Dan>
+</view>
+</view>

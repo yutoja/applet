@@ -1,0 +1,48 @@
+.musciList{
+  height: 60vh;
+  margin: 0 3%;
+  background-color: rgb(236, 236, 236);
+  border-radius: 20rpx;
+}
+.musciList .musciListhe{
+  padding:3% 5%;
+  font-weight: 900;
+  font-size: 36rpx;
+}
+.musciList .musicv{
+  position: relative;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding:3% 5%;
+}
+.musciList .musicscroll{
+  height: 600rpx;
+}
+.musciList .gesh{
+  color: #cccccc;
+  font-size: 24rpx;
+}
+.musciList .iconfont{
+  font-size: 24rpx;
+  margin-top: 10rpx;
+  color: rgb(182, 182, 182);
+}
+.red{
+  position: absolute;
+  border: 15rpx solid red;
+  border-bottom-color:transparent ;
+  border-left-color:transparent ;
+  transform: rotate(45deg);
+}
+.lieb{
+  margin-left: 50rpx;
+}
+.over{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 400rpx;
+  display: inline-block;
+  vertical-align: bottom;
+}

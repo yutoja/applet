@@ -1,0 +1,66 @@
+.desstall{
+  font-size: 26rpx;  padding: 0 24rpx;
+  height: 100vh;
+}
+.desat{
+  white-space: nowrap;
+  position: fixed;
+  top: 0;
+  background-color: white;
+  z-index: 999;
+}
+.top{
+  position: relative;
+  top: 114rpx;
+}
+.nav-de{
+  display: inline-block;
+  padding:40rpx 42rpx;
+}
+.nav-de:nth-child(1){
+  padding-left:10rpx;
+}
+.item{
+  /* display: inline-block; */
+  position: relative;
+  width: 210rpx;
+  margin:0  13rpx 37rpx;
+}
+.item image{
+   height: 210rpx;
+  width: 210rpx;
+  border-radius: 15%;
+}
+.itemli{
+  position: absolute;
+  right: 10rpx;
+  top: 10rpx;
+  padding: 6rpx 13rpx;
+  background-color: rgba(0.5, 0.5, 0.5, 0.2);
+  border-radius: 100rpx;
+  color: white;
+  font-size: 24rpx;
+}
+.itemtext{
+  overflow: hidden;
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  -webkit-line-clamp:2 ;
+  -webkit-box-orient:vertical ;
+  word-break: break-all;
+}
+.item1{
+  display: flex;
+  flex-wrap: wrap;
+}
+.zhutia{
+  height: 10rpx;
+  width: 70rpx;
+  border-radius: 10rpx;
+  background-color: red;
+  display: inline-block;
+  position: absolute;
+  bottom: 80rpx;
+  z-index: -1;
+  transition: all 0.3s;
+}
