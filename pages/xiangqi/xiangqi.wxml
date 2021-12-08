@@ -1,5 +1,6 @@
 <view class="xiangqi {{show?'':'dis'}}">
-  <view class="xianghe" style="background: url({{listsongs.creator.backgroundUrl}}) round;">
+  <view class="xianghe">
+  <image class="backgro" src="{{listsongs.creator.backgroundUrl}}" mode="aspectFill"></image>
     <view class="left">
       <image src="{{listsongs.coverImgUrl}}"></image>
       <text class="leftxin">{{shu}}</text>

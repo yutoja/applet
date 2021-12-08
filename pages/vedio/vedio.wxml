@@ -5,7 +5,7 @@
   </scroll-view>
   <swiper style="height: {{height}};" bindchange="chang" bindanimationfinish="finsh" current="{{index}}" duration="300" >
     <swiper-item wx:for="{{videoGroupList}}" wx:key="{{id}}" >
-      <view class="vediobody {{'emif'+index}}" wx-if="{{videodata[videoGroupList[index].id].length>0}}">
+      <view class="vediobody {{'emif'+index}}" wx:if="{{videodata[videoGroupList[index].id].length>0}}">
         <view class="vedioItem" 
         wx:for="{{videodata[videoGroupList[index].id]}}" 
         wx:key="id" 

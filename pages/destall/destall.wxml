@@ -8,15 +8,20 @@
   <swiper class="top" style="height: {{height}};" bindchange="chang" current="{{index}}" duration="300">
     <swiper-item wx:for="{{navtab}}" wx:key="{{item}}">
       <view class="item1 {{'emif'+index}}">
-        <view class="item" wx:for="{{songs[item].data}}" wx:for-item="musicitem" wx:key="{{musicitem.id}}"  bindtap="skp" id='{{musicitem.id}}'>
+        <block wx:if="{{songs[item].data.length>0}}">
+        <view
+         class="item"  wx:for="{{songs[item].data}}" wx:for-item="musicitem" wx:key="{{musicitem.id}}" bindtap="skp" id='{{musicitem.id}}'>
           <image src="{{musicitem.coverImgUrl}}"></image>
           <text class="itemli"><text class="iconfont icon-bofang"></text> <text style="vertical-align: top;">{{tools.renshu(musicitem.playCount)}}</text></text>
           <view class="itemtext">
             {{musicitem.name}}
           </view>
         </view>
+        </block>
+        <view class="xiaox"  wx:else>
+          <List></List>
+        </view>
       </view>
     </swiper-item>
   </swiper>
-
 </scroll-view>

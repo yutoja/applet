@@ -105,9 +105,12 @@ setTimeout(()=>{
   onLoad:async function (options) {
     let listdata = wx.getStorageSync('listdata')
     let song = wx.getStorageSync('song')
-    listdata.forEach(value=>{
+    if(listdata){
+      listdata.forEach(value=>{
       list.setlist(value)
     })
+    }
+    
     app.muaic['song'] = song
     app.muaic.musicid = song.id
      let {banners} = await request('/banner')

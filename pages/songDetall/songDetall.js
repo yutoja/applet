@@ -132,6 +132,7 @@ Page({
     const music = wx.getBackgroundAudioManager()
     if (music.src != this.data.src.url) {
       this.musicName(this.data.dat[0].name, this.data.src.url, time)
+      
       this.setData({
         music: this.data.src.id
       })
@@ -159,6 +160,7 @@ Page({
     })
     app.muaic.musicid = this.data.dat[0].id
     this.gezi(this.data.src.id)
+    time ? music.seek(time) : ''
     // 监听音乐的暂停/播放
     music.onPlay(() => {
       this.changmusic(true)

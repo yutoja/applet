@@ -58,6 +58,11 @@ Page({
           })
         }).exec();
     },
+    skp(e){
+      wx.navigateTo({
+        url: `../userhome/userhome?id=${e.currentTarget.id}`,
+      })
+    },
   /**
    * 生命周期函数--监听页面加载
    */

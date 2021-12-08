@@ -32,7 +32,7 @@
           <view class="userae">村龄：{{tools.nian(user.createDays)}}</view>
           <!-- <view class="userwe">地区：浙江 杭州</view> -->
         </view>
-        <view class="useryi">
+        <!-- <view class="useryi">
           <view class="userjz">
             音乐品味
           </view>
@@ -43,7 +43,7 @@
               <view class="useryz">{{ids.length}}首</view>
             </view>
           </view>
-        </view>
+        </view> -->
         <view class="useryi"  wx:if="{{create.length>0}}">
           <view class="userjz">
             创建的歌单
@@ -77,7 +77,7 @@
             <image src="{{item.user.avatarUrl}}"></image>
             <view class="dojis">
               <view class="eih">{{item.user.nickname}}</view>
-              <view>昨天12:19</view>
+              <view>{{tools.cjian(item.eventTime)}}</view>
             </view>
             <view class="doei">分享：</view>
           </view>

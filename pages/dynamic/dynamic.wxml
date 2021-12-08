@@ -1,3 +1,5 @@
+<!-- 引入过滤 -->
+<wxs src="../../utils/com.wxs" module="tools" />
 <view class="dynamic">
   <view class="top">
     <view class="userdot">
@@ -5,7 +7,7 @@
         <image src="{{home.user.avatarUrl}}" ></image>
         <view class="dojis">
           <view class="eih">{{home.user.nickname}}</view>
-          <view>昨天12:</view>
+          <view>{{tools.cjian(home.eventTime)}}</view>
         </view>
       </view>
       <view class="dotbody">
@@ -33,7 +35,7 @@
      
       <view class="czahe" wx:if="{{pinglu.hotComments.length>0}}">精彩评论</view>
         <view class="cazbody" wx:for="{{pinglu.hotComments}}" wx:key="{{item.id}}" wx:if="{{pinglu.hotComments.length>0}}">
-          <view class="comitemhe">
+          <view class="comitemhe" bindtap="skp" id="{{item.user.userId}}">
             <image src="{{item.user.avatarUrl}}" class="comimg"></image>
             <view class="comjian">
               <view class="comname">{{item.user.nickname}}</view>
@@ -46,12 +48,12 @@
           </view>
           <view class="commentbody">
             <view class="commentpin">{{item.content}}</view>
-            <view class="commenthui">7条回复 <text class="iconfont icon-jiantou"></text> </view>
+            <!-- <view class="commenthui">7条回复 <text class="iconfont icon-jiantou"></text> </view> -->
           </view>
         </view>
         <view class="czahe" wx:if="{{pinglu.comments.length>0}}">最新评论</view>
         <view class="cazbody" wx:for="{{pinglu.comments}}" wx:key="{{item.id}}" wx:if="{{pinglu.comments.length>0}}">
-          <view class="comitemhe">
+          <view class="comitemhe" bindtap="skp" id="{{item.user.userId}}">
             <image src="{{item.user.avatarUrl}}" class="comimg"></image>
             <view class="comjian">
               <view class="comname">{{item.user.nickname}}</view>
@@ -64,7 +66,7 @@
           </view>
           <view class="commentbody">
             <view class="commentpin">{{item.content}}</view>
-            <view class="commenthui">7条回复 <text class="iconfont icon-jiantou"></text> </view>
+            <!-- <view class="commenthui">7条回复 <text class="iconfont icon-jiantou"></text> </view> -->
           </view>
         </view>
         </view>
