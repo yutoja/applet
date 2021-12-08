@@ -57,12 +57,14 @@ setTimeout(()=>{
  async bofa(){
    let as = this.data.danl
     list.list  = [...as]
+    wx.setStorageSync("listdata", list.list)
     const a = await this.getmusic(as[0].id)
     this.musicName(a.dat[0].name,a.src.url,a.src.id)
     app.muaic.song = as[0]
     this.setData({
       isplay:true,
-      songs:as[0]
+      songs:as[0],
+      list:list.list
     })
   },
 filte(value){
@@ -96,41 +98,23 @@ skp(e){
     const music = wx.getBackgroundAudioManager()
     music.title = name 
     music.src = src
+    app.muaic.musicid = id
+    this.setData({
+      music:id
+    })
     // 监听音乐的暂停/播放
     music.onPlay(()=>{
-      app.muaic.musicid = id
-      app.muaic.isplay=true
+      this.changmusic(true)
     })
     music.onPause(()=>{
-      app.muaic.isplay=false
      this.changmusic(false)
     })
     music.onStop(()=>{
-      app.muaic.isplay=false
       this.changmusic(false)
     })
-    music.onTimeUpdate(()=>{
-        const fe = parseInt(music.currentTime / 60)
-        const miao = parseInt(music.currentTime % 60)
-        let sleng = `${fe < 10 ? '0' + fe : fe}:${miao < 10 ? '0' + miao : miao}`
-       if(this.data.mov){
-           this.setData({
-        currentTime:sleng,
-        sc:music.currentTime/music.duration*100
-      })
-       }
-       if(this.data.pir){
-        var inde= this.data.gezi.findIndex(value=>value.time>music.currentTime)
-        if(this.data.inde!=inde){
-          this.setData({
-          inde
-        })
-        }
-        
-       }
-    })
     music.onEnded(async ()=>{
-      switch(this.data.zin){
+      let value = wx.getStorageSync('zin')
+      switch(value){
         case 0: 
         this.musicName(name,src,id)
         music.pause()
@@ -167,6 +151,7 @@ skp(e){
     },
     // 修改音乐的状态
     changmusic(isplay){
+      app.muaic.isplay=isplay
       this.setData({
         isplay
       })
@@ -174,6 +159,7 @@ skp(e){
 toSongDetail(event){
   let song = event.currentTarget.dataset.song;
   let dt = event.currentTarget.dataset.dt;
+  if(!song) return
   wx.navigateTo({
     url: `/pages/songDetall/songDetall?song=${song}&dt=${dt}`,
   })
@@ -256,7 +242,43 @@ toSongDetail(event){
      list:list.list,
      music:app.muaic.musicid
     })
-    
+    let id = app.muaic.musicid
+    const music = wx.getBackgroundAudioManager()
+        // 监听音乐的暂停/播放
+        music.onPlay(()=>{
+          this.changmusic(true)
+        })
+        music.onPause(()=>{
+         this.changmusic(false)
+        })
+        music.onStop(()=>{
+          this.changmusic(false)
+        })
+        music.onEnded(async ()=>{
+          let value = wx.getStorageSync('zin')
+          switch(value){
+            case 0: 
+            this.musicName(name,src,id)
+            music.pause()
+            music.play()
+            break;
+            case 1:
+               let index =  list.list.findIndex(value=>value.id==id)+1
+               index= index >= list.list.length-1 ? 0 : index
+               app.muaic.song = list.list[index]
+               this.setData({
+                 songs:list.list[index]
+               })
+             const a =  await this.getmusic(list.list[index].id)
+             this.musicName(a.dat[0].name,a.src.url,a.src.id)
+              break;
+            case 2:
+                let unm =parseInt(Math.random()*data.list.length)
+                const as =  await this.getmusic(list.list[unm].id)
+                this.musicName(as.dat[0].name,as.src.url,as.src.id)
+              break;
+          }
+        })
   },
 
   /**

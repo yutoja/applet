@@ -1,5 +1,5 @@
 .index{
-  padding-bottom:10px ;
+  padding-bottom:80px ;
 }
 .over{
   overflow: hidden;
@@ -26,7 +26,7 @@
   flex-direction: column;
   align-items: center;
 }
-.iconfont{
+.font{
   width: 100rpx;
   border-radius: 50%;
   background:rgb(240,19,19);
@@ -36,7 +36,7 @@
   text-align: center;
   margin: 20rpx 0;
 }
-.iconfont+text{
+.font+text{
   font-size: 26rpx;
 }
 .scroll{
@@ -120,4 +120,78 @@
   color: #939594;
   background-color: #edefee;
   /* border-radius: 30rpx; */
+}
+.xiafooter{
+  position: fixed;
+  bottom: 0;
+  height: 140rpx;
+  width: 100%;
+  border-top:1px solid #f8f8f8;
+  display: flex;
+  padding:  0 40rpx;
+  align-items: center;
+  background-color: white;
+}
+.footim{
+  height: 60rpx;
+  width: 60rpx;
+  position: absolute;
+}
+.footim image:nth-child(1){
+  position: absolute;
+  left: 50%;
+  top: -14rpx;
+  transform: translate(-50%);
+  height: 150%;
+  width: 150%;
+  z-index: -1;
+}
+.footim image:nth-child(2){
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+}
+.footrename{
+  margin-left: 100rpx;
+  width: 350rpx;
+  font-size: 28rpx;
+}
+.fooetrri{
+  font-size: 50rpx;
+  padding: 10rpx 40rpx 0;
+}
+.namex{
+  color: #cbcbcb;
+  font-size: 24rpx;
+}
+.listt{
+  position: fixed;
+  bottom: -100%;
+  width: 100vw;
+  z-index: 999;
+  transition: all 0.5s;
+}
+.xiatap{
+  position: absolute;
+  right: 45rpx;
+  font-size: 48rpx;
+  color:black;
+  top: 25rpx;
+}
+.top{
+  bottom: 0 !important;
+}
+.list{
+  position: fixed;
+  bottom: -100%;
+  width: 100vw;
+  z-index: 999;
+  transition: all 0.5s;
+}
+.xiatap {
+  position: absolute;
+  right: 45rpx;
+  font-size: 48rpx;
+  color: black;
+  top: 25rpx;
 }

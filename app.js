@@ -1,9 +1,20 @@
-App({
-  muaic:{
-    isplay:false,
-    musicid:0,
-    song:null
+const muaic = {
+  isplay:false,
+  musicid:0,
+  song:null
+} 
+let a = null
+Object.defineProperty(muaic,'song',{
+  get(){
+  return a
+  },
+  set(value){
+   a = value
+   wx.setStorageSync("song", value)
   }
+})
+App({
+  muaic
   ,
   onLaunch() {
     // 展示本地存储能力

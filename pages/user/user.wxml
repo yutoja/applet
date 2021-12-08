@@ -12,7 +12,7 @@
   <image src="/static/images/.png" class="gongbu" bindtap="guangbi"></image>
   <!-- 喜欢的音乐 -->
   <view class="music">
-    <view class="gebbv">
+    <view class="gebbv" bindtap="skp" id="{{like[0].id}}">
       <image src="{{like[0].coverImgUrl}}" class="musicimg"></image>
       <view class="gebbu">
         <view class="over">{{like[0].name}}</view>
@@ -20,9 +20,9 @@
       </view>
 
     </view>
-    <text class="xindong">
+    <!-- <text class="xindong">
       <text class="iconfont icon-xindong"></text><text class="xindo">心动模式</text>
-    </text>
+    </text> -->
   </view>
   <!-- 歌单 -->
   <!-- <Gedan name='收藏歌单' geimg='/static/images/123.jpg' gequantity='12' quantity='1' createor='wu' gename='年' >

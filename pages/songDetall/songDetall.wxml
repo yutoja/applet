@@ -1,4 +1,4 @@
-<view class="songDetailContainer">
+<view class="songDetailContainer" bindtouchmove="move">
   <view class="author">{{dat[0].ar[0].name}}</view>
   <view class="zhon">
     <view class="songbod" wx:if="{{!pir}}">
@@ -27,8 +27,9 @@
   </view>
   <view class="bod">
     <text>{{currentTime}}</text>
-    <view class="reage" bindtouchmove="move" bindtouchend="touchend" bindtouchstart="musictap">
-      <view class="radiu" style="left:{{sc}}%"></view>
+    <view class="reage"  bindtouchend="touchend" bindtouchstart="musictap">
+      <view class="rege"></view>
+      <view class="radiu {{!mov?'cla':''}}" style="left:{{sc}}%"></view>
       <view class="jing" style="width:{{sc}}%"></view>
     </view>
     <text>{{startTime}}</text>

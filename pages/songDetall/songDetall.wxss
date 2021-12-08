@@ -95,27 +95,33 @@
   
 }
 .reage{
-  border-top: 1px solid rgb(184, 184, 184);
+  /* border-top: 1px solid rgb(141, 141, 141); */
   flex: 1;
+  padding: 35rpx 0;
   margin: 0 35rpx;
   position: relative;
 }
+.rege{
+  border-top:4rpx solid #dadada ;
+  border-radius: 20rpx;
+}
 .radiu{
-  height: 11rpx;
-  width: 11rpx;
+  height: 10rpx;
+  width: 10rpx;
   background: white;
   position: absolute;
-  top: -6rpx;
+  top: 31rpx;
   left: 0;
   border-radius: 50%;
+  z-index: 999;
 }
 .jing{
-  border-top: 1px solid #674f4f;
+  border-top: 4rpx solid #da3f34;
   position: absolute;
-  top: -2rpx;
+  top: 35rpx;
   left: 0;
   width: 0;
-  border-radius: 50%;
+  border-radius: 20rpx;
 }
 .footer{
   margin-top: 10rpx;
@@ -172,4 +178,7 @@
   background-color: #cccccc2e;
   color: white;
   font-size: 24rpx;
+}
+.cla{
+  transform: scale(1.2);
 }

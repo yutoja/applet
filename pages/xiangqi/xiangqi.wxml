@@ -1,5 +1,5 @@
 <view class="xiangqi {{show?'':'dis'}}">
-  <view class="xianghe">
+  <view class="xianghe" style="background: url({{listsongs.creator.backgroundUrl}}) round;">
     <view class="left">
       <image src="{{listsongs.coverImgUrl}}"></image>
       <text class="leftxin">{{shu}}</text>
@@ -8,10 +8,10 @@
       <view class="righthe over">{{listsongs.name}}</view>
       <view>
         <view class="rightbo" id="{{listsongs.creator.userId}}"  bindtap="skp">
-          <image src="{{listsongs.creator.backgroundUrl}}"></image>
+          <image src="{{listsongs.creator.avatarUrl}}"></image>
           <text class="over" >{{listsongs.creator.nickname}}</text>
         </view>
-        <view class="rightfoot">{{listsongs.description}}</view>
+        <view class="rightfoot">{{listsongs.description?listsongs.description:'这个人很懒啥都不写'}}</view>
       </view>
     </view>
   </view>
@@ -55,7 +55,7 @@
      <image src="/static/images/disc.png"></image>
      <image src="{{songs.al.picUrl}}"></image>
      </view>
-     <view class="footrename over">
+     <view class="footrename over" data-song="{{songs.id}}" bindtap="toSongDetail" data-dt="{{songs.dt}}">
      {{songs.name}}<text class="namex ">- {{songs.ar[0].name}}</text>
      </view>
      <view class="fooetrri iconfont {{isplay?'icon-zanting':'icon-kaishi'}}" bindtap="stop">

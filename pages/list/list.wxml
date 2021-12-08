@@ -1,46 +1,50 @@
-<view class="list" bindtouchmove="scroll">
-  <!-- 导航栏 -->
-  <scroll-view scroll-x class="navsocrll">
-    <view class="navitem" bindtap="click" id='0'>
-      <view class="navContent">官方</view>
-    </view>
-    <view class="navitem" bindtap="click" id='1'>
-      <view class="navContent">精选</view>
-    </view>
-    <view class="navitem" bindtap="click" id='2'>
-      <view class="navContent">曲风</view>
-    </view>
-    <view class="navitem" bindtap="click" id='3'>
-      <view class="navContent">全球</view>
-    </view>
-    <view class="navitem" bindtap="click" id='4'>
-      <view class="navContent">MV</view>
-    </view>
-    <view class="navitem" bindtap="click" id='5'>
-      <view class="navContent">特色</view>
-    </view>
-    <text class="scrollt" style="left:{{xuanzh*122+29}}rpx"></text>
-  </scroll-view>
-    <Kuai name='榜单推荐' shu='{{wang}}'></Kuai>
-  <view class="guang">
-    <view class="guanli">
-      <!-- <image src="/static/images/123.jpg" class="firs1"></image> -->
-      <text>官方榜</text>
-    </view>
-    <view class="guanlis" wx:for="{{jingxu}}" wx:key="{{item.id}}" id="{{item.id}}" bindtap="skip" style="background-color:{{color[index]}};">
-      <view class="guanxi">{{item.updateFrequency}}</view>
-      <view class="guanbo">
-        <view class="guleft">
-          <view class="gulef2" style="color:{{back[index]}};">{{item.name}}</view>
-          <image src="{{item.coverImgUrl}}" class="lefter"></image>
-        </view>
-        <view class="guright ">
-          <view class="gulie over" wx:for="{{item.tracks}}" wx:for-item="child">{{index+1}}. {{child.first}}<text class="blba"> - {{child.second}}</text></view>
+<!-- 导航栏 -->
+<scroll-view scroll-x class="navsocrll">
+  <view class="navitem" bindtap="click" id='0'>
+    <view class="navContent">推荐</view>
+  </view>
+  <view class="navitem" bindtap="click" id='1'>
+    <view class="navContent">官方</view>
+  </view>
+  <view class="navitem" bindtap="click" id='2'>
+    <view class="navContent">精选</view>
+  </view>
+  <view class="navitem" bindtap="click" id='3'>
+    <view class="navContent">曲风</view>
+  </view>
+  <view class="navitem" bindtap="click" id='4'>
+    <view class="navContent">全球</view>
+  </view>
+  <view class="navitem" bindtap="click" id='5'>
+    <view class="navContent">MV</view>
+  </view>
+
+  <text class="scrollt" style="left:{{xuanzh*124+26}}rpx"></text>
+</scroll-view>
+<scroll-view class="list" enhanced bindscroll="scroll" scroll-y scroll-into-view="{{map[bbb]}}" scroll-with-animation binddragend="redd">
+  <view class="zhon">
+    <Kuai name='榜单推荐' shu='{{wang}}' id="w"></Kuai>
+    <view class="guang" id="g">
+      <view class="guanli">
+        <!-- <image src="/static/images/123.jpg" class="firs1"></image> -->
+        <text>官方榜</text>
+      </view>
+      <view class="guanlis" wx:for="{{jingxu}}" wx:key="{{item.id}}" id="{{item.id}}" bindtap="skip" style="background-color:{{color[index]}};">
+        <view class="guanxi">{{item.updateFrequency}}</view>
+        <view class="guanbo">
+          <view class="guleft">
+            <view class="gulef2" style="color:{{back[index]}};">{{item.name}}</view>
+            <image src="{{item.coverImgUrl}}" class="lefter"></image>
+          </view>
+          <view class="guright ">
+            <view class="gulie over" wx:for="{{item.tracks}}" wx:for-item="child">{{index+1}}. {{child.first}}<text class="blba"> - {{child.second}}</text></view>
+          </view>
         </view>
       </view>
     </view>
+    <Kuai name='精选榜' shu='{{lun}}' id="j"></Kuai>
+    <Kuai name='曲风榜' shu='{{guang}}' id="q"></Kuai>
+    <Kuai name='全球榜' shu='{{shan}}' id="qi"></Kuai>
   </view>
-  <Kuai name='精选榜' shu='{{lun}}'></Kuai>
-  <Kuai name='曲风榜' shu='{{guang}}'></Kuai>
-  <Kuai name='全球榜' shu='{{shan}}'></Kuai>
-</view>
+
+</scroll-view>

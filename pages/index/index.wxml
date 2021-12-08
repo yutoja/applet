@@ -10,15 +10,15 @@
 <!-- 导航图标 -->
 <view class="navgi">
   <view class="navitem" bindtap="mei">
-    <text class="iconfont icon-shouye"></text>
+    <text class="iconfont icon-shouye font"></text>
     <text>每日推荐</text>
   </view>
   <view class="navitem" bindtap="skipp">
-    <text class="iconfont icon-yinleliebiao-"></text>
+    <text class="iconfont icon-yinleliebiao- font"></text>
     <text>歌单</text>
   </view>
   <view class="navitem" bindtap="paihan">
-    <text class="iconfont icon-paixingbang"></text>
+    <text class="iconfont icon-paixingbang font"></text>
     <text>排行榜</text>
   </view>
   <!-- <view class="navitem">
@@ -61,4 +61,22 @@
    </swiper-item>
 
 </swiper>
+<view class="xiafooter">
+     <view class="footim" data-song="{{songs.id}}" bindtap="toSongDetail" data-dt="{{songs.dt}}">
+     <image src="/static/images/disc.png"></image>
+     <image src="{{songs.al.picUrl}}"></image>
+     </view>
+     <view class="footrename over" data-song="{{songs.id}}" bindtap="toSongDetail" data-dt="{{songs.dt}}">
+     {{songs.name}}<text class="namex ">- {{songs.ar[0].name}}</text>
+     </view>
+     <view class="fooetrri iconfont {{isplay ?'icon-zanting':'icon-kaishi'}}" bindtap="stop">
+     </view>
+     <view class="fooetrri iconfont icon-24gf-playlistMusic" bindtap="tigge"></view>
+  </view>
+    <!-- 播放列表 -->
+    <view class="list {{tigge?'top':''}}">
+    <view class="iconfont icon-weibiaoti- xiatap" bindtap="tigge"></view>
+    <Music wx:if="tigge" list="{{listt}}" music="{{music}}" bindmyremove="remove">
+    </Music>
+  </view>
 </view>
